@@ -1,5 +1,5 @@
 import java.util.*;
-//this is pretty much done you just have to think of the different methods that you can add as it relates to reading
+//this is pretty much done you just have to think of the different methods that you can add as it relates to readingh
 public class ReadingMaterialDriver {
 
 public static void main (String[] args){
