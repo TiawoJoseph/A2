@@ -22,19 +22,12 @@ public class Course {
     //average the test scores
     // divide the sum of all the test scores/StuEnrolled.size()
 
+    //D) average
     public Double average (){
-       Double total=156.8;
 
-       //FOR EACH STUDENT OBJECT GET THE Score FOR EACH TEST AND ADD IT TO THE TOTAL. THEN DIVIDE THE TOTAL BY THE TOTAL #
-        //OF STUDENT OBJECTS IN THE ARRAY LIST
-
-        for(int i=0; i<StuEnrolled.size();i++){
-          System.out.println(StuEnrolled.get(i));
-
-        }
-
-        Double average = total/StuEnrolled.size();
-        return average;
+        Double average;
+        Student.average();
+        return Student.average();
 
     }
 
@@ -42,7 +35,7 @@ public class Course {
     public  Object roll (){
         for (Object array : StuEnrolled){
 
-            System.out.print(array);
+            System.out.println(array);
         }
 
             return (StuEnrolled);

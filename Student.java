@@ -8,7 +8,7 @@ public class Student
 {
     private String firstName, lastName;
     private String homeAddress, schoolAddress;
-    private Double test1, test2, test3; // A) test scores in each object
+    private static Double test1=0.0, test2=0.0, test3=0.0; // A) test scores in each object
 
 
     //-----------------------------------------------------------------
@@ -21,22 +21,17 @@ public class Student
         lastName = last;
         homeAddress = home;
         schoolAddress = school;
-        test1 = mark1;
-        test2 = mark2;
-        test3 = mark3;
+        this.test1 = mark1;
+        this.test2 = mark2;
+        this.test3 = mark3;
     }
-    //C) overload the method
-//    public Student (String first, String last, String home, String school, Double m1, Double m2, Double m3){
+//    C) overload the method
+//    public Student (String first, String last, String home, String school,){
 //        firstName = first;
 //        lastName = last;
 //        homeAddress = home;
 //        schoolAddress = school;
-//        test1=0.0;
-//        test2=0.0;
-//        test3 =0.0;
-//        test1 = m1;
-//        test2 = m2;
-//        test3 = m3;
+//
 //
 //    }
 
@@ -53,7 +48,7 @@ public class Student
         result += "School Address:\n" + schoolAddress +"\n";
         // G) modify to string to add in the test scores and avgs
         result += "Test scores [1,2, & 3]: \n" +test1 +", "+ test2 +", "+test3 +"\n";
-        result+="Test Scores Average: \n"+average(test1,test2,test3);
+        result+="Test Scores Average: \n"+average();
         return result;
     }
 
@@ -88,13 +83,11 @@ public class Student
     }
 
     // f) computes and returns the avg test score
-    public Double average(Double T1,Double T2,Double T3 ){
+    public static Double average(){
         Double avg;
-        test1=T1;
-        test2= T2;
-        test3=T3;
 
-        avg= ((T1+T2+T3)/3);
+
+        avg= ((test1+test2+test3)/3);
 
         return avg;
     }
